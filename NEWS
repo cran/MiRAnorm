@@ -1,0 +1,88 @@
+MiRAnorm v1.0.0 (Release date 2016-07-18)
+==============
+
+Changes:
+
+* Release!  Documentation of functions that are still exported are now mostly updated.
+
+* Fixed variable name in example for mariners to reflect dataset names.
+
+* Added exclude variable to exclude specific miRNA from the selection of HK genes process.
+
+
+
+MiRAnorm v0.4.0 (Release date 2016-06-01)
+==============
+
+Changes:
+
+* Include kappa agreement probabilities in final returned function. (0 if method=“simple”)
+
+* All adaptive normalizing genes are checked for potential treatment effect and warnings are issued if any are found.  Adjusted p-values are used based on BH.
+
+* Small fix on treatment effect assessment for inclusion of plyr::.
+
+* Fixed data format issue on returned variables which returned Sample and Trt as lists.
+
+
+MiRAnorm v0.3.0 (Release date 2016-04-11)
+==============
+
+Changes:
+
+* Sample naming convention changed.  No ‘.’ allowed in names for input data.
+
+* Fixed bug in norm.quant where sample names were not being passed.
+
+* Reconstructed ggplot output for easier read.
+
+* k argument no longer used.  This was originally for panel breaking by CV level.
+
+* ggplot changed to stacked facet.  Removed extraneous displays such as median norm.
+
+* Reformated heatmap.  Includes adaptive text size based on number of rows, fixed color display for respecified and known positives genes, and an adaptive color wheel for multiple treatment groups.
+
+
+MiRAnorm v0.2.0 (Release date 2016-04-07)
+==============
+
+Changes:
+
+* Fixed number of cores for parallel to n.core = detectCores() - 1
+
+* Added parallel processing cluster.kappa function for Windows including automated detection.
+
+* Fixed a bug with norm.cluster when more than 1 group met the size criteria that caused function to throw an error due to dat structure.
+
+* Some variable name changes in miranorm
+
+* Updated deprecated commands from ggplot
+
+* Changed function name from normal.end to normal.selected to better reflect functionality
+
+* Added initial error checking for data structure to allow for only a single value for each Sample Gene combination.
+
+* Error checking for required names of dataset.
+
+* Warning implemented when less than 50% of the data meets user set criteria.
+
+* Volcano plot disabled until later versions and treatment group is clarified.
+
+
+
+MiRAnorm v0.1.1 (Release date 2016-04-06)
+==============
+
+Changes:
+
+* Minor visual fixes to ggplot figure to improve appearance
+
+* Fixed method="simple" conflict with still trying to create Clustplot in miranorm function.
+
+
+MiRAnorm v0.1 (Release date 2016-04-05)
+==============
+
+Changes:
+
+* First package build
